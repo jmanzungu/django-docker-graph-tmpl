@@ -1,0 +1,12 @@
+<!-- register.html -->
+{% extends "base.html" %}
+{% block content %}
+<form hx-post="{% url 'register' %}" hx-target="#message" hx-swap="innerHTML">
+    <input type="text" name="username" placeholder="Username">
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password1" placeholder="Password">
+    <input type="password" name="password2" placeholder="Confirm Password">
+    <button type="submit">Register</button>
+</form>
+<div id="message"></div>
+{% endblock %}
